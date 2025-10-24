@@ -16,7 +16,7 @@ const List : React.FC<tokens> = ({token}) => {
         const response = await axios.get(backendUrl + "/api/product/list")
         if(response.data.success) {
             console.log(response.data);
-            setList(response.data.products);
+            setList(response.data.product);
         } else {
             toast.error(response.data.message)
         }
