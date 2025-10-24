@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+
+.knewave {
+  font-family: "Knewave", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
