@@ -5,14 +5,14 @@ import { AppContext } from "../Context/AppContext";
 
 
 type card = {
-    id: number
+    _id: string
     name : string
     description : string
     price : number
     image : string
 }
 
-const Card = ({image , name , description , price , id} : card) => {
+const Card = ({image , name , description , price , _id} : card) => {
 
   const context = useContext(AppContext)
   
@@ -22,13 +22,13 @@ const Card = ({image , name , description , price , id} : card) => {
   const handleAddcart = (e : React.MouseEvent<HTMLDivElement , MouseEvent>) => {
       e.stopPropagation()
       e.preventDefault()
-      addTocart({ id , image , name , description , price})
+      addTocart({ _id , image , name , description , price})
   }
 
   console.log(handleAddcart);
 
   return (
-    <Link to={`/product/${id}`} className="border w-[250px] rounded-b-xl cursor-pointer hover:-translate-y-1 duration-300">
+    <Link to={`/product/${_id}`} className="border w-[250px] rounded-b-xl cursor-pointer hover:-translate-y-1 duration-300">
         <img src={image} className="mb-1 border-b object-cover h-60 w-full" />
         <div className="p-2">
             <h1 className="uppercase text-lg mb-3">{name}</h1>

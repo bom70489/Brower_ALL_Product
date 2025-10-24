@@ -23,7 +23,7 @@ const Cart = () => {
         <div className="max-w-[1700px] mx-auto p-4">
           <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-6 justify-items-center">
             {cartItems.map(item => (
-              <div key={item.id} className="border w-[500px] px-3 py-1 rounded flex">
+              <div key={item._id} className="border w-[500px] px-3 py-1 rounded flex">
                 <img src={item.image} className="w-[200px] mr-3 object-cover mb-2"/>
                 <div className="w-full flex flex-col justify-between">
                   <div className="w-[250px]">

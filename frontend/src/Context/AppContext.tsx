@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 
 type ProductType = {
-  id?: string    
+  _id: string    
   image: string
   name: string
   description: string
@@ -102,7 +102,7 @@ export const AppProvider : React.FC<AppProviderProps> = ({children}) => {
                 return;
             }
 
-            const response = await axios.post(backendURl + "/api/cart/add" , { ItemId : product.id } , {
+            const response = await axios.post(backendURl + "/api/cart/add" , { ItemId : product._id } , {
                 headers : { Authorization : `Bearer ${token}` }
             })
             

@@ -22,7 +22,7 @@ const Home = () => {
         <div className="max-w-[1700px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-4 justify-items-center">
           {product.slice(0 , 2).map((item) => (
            <Card 
-              id={item._id}
+              _id={item._id}
               image={item.image}
               name = {item.name}
               description={item.description}
@@ -34,7 +34,7 @@ const Home = () => {
         <div className="max-w-[1700px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-4 justify-items-center">
           {product.slice(0 , 5).map((item) => (
            <Card 
-              id={item._id}
+              _id={item._id}
               image={item.image}
               name = {item.name}
               description={item.description}
