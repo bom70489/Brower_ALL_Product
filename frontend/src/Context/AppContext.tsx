@@ -77,7 +77,7 @@ export const AppProvider : React.FC<AppProviderProps> = ({children}) => {
             
             const response = await axios.get(backendURl + "/api/product/list")
             if(response.data.success) {
-                setProducts(response.data.products)
+                setProducts(response.data.product)
             } else {
                 toast.error(response.data.message)
             }

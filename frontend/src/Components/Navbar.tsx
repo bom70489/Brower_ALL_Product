@@ -76,15 +76,23 @@ const Navbar = () => {
                 <IoMdPerson />
                 
                 {visible && (
-                  <div className='absolute right-0 top-full bg-white text-black rounded shadow-md mt-2 z-10'>
-                    <p 
-                      onClick={logout} 
-                      className='px-4 py-2 cursor-pointer hover:bg-gray-200 text-lg'
+                <div className="absolute right-0 top-full bg-white text-black rounded shadow-md mt-2 z-10">
+                  {token ? (
+                    <p
+                      onClick={logout}
+                      className="px-4 py-2 cursor-pointer hover:bg-gray-200 text-lg"
                     >
                       Logout
                     </p>
-                  </div>
-                )}
+                  ) : (
+                    <Link
+                      to="/login"
+                      className="block px-4 py-2 cursor-pointer hover:bg-gray-200 text-lg"
+                    >
+                      Login
+                    </Link>
+                  )}
+                      </div>)}
               </div>
             </div>
 
